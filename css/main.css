@@ -1,0 +1,471 @@
+:root {
+	--blue: #8AB2BD;
+	--dark-blue: #528D9E;
+	--green: #8DBD8A;
+	--black: #2A2A2A;
+	--grey: #666;
+	--true-white: white;
+	--white: #EEE;
+	--red: #CF4C4C;
+	--pink: #E9B1C5;
+	--purple: #7C61B9;
+}
+
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--white);
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.5;
+	margin: auto;
+	text-align: justify;
+}
+
+li {
+	font-size: 1em;
+}
+
+p, td, li, label, input, textarea {
+	font-family: Source Sans Pro;
+	font-weight: lighter;	
+	color: var(--grey);
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: Open Sans;
+	font-weight: lighter;
+	text-align: center;
+}
+
+h2, h3, h4, h5 {
+	color: var(--red);
+}
+
+h1 {
+	font-size: 36pt;
+	color: var(--red);
+	margin-bottom: 0.5em;
+}
+
+h2 {
+	font-size: 30pt;
+}
+
+h3 {
+	font-size: 26pt;
+}
+
+h4 {
+	font-size: 22pt;
+}
+
+h5 {
+	font-size: 16pt;
+}
+
+hr {
+	border: 2px dashed var(--blue);
+	margin: 10px;
+}
+
+ul, ol {
+	margin-left: 40px;
+}
+
+table {
+	border: 1px solid var(--blue);
+}
+
+table * {
+	font-family: Source Sans Pro;
+	font-weight: normal;
+}
+
+table, th, td{
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+}
+
+th {
+	background-color: var(--blue);
+	color: var(--white);
+	padding: 5px;
+	font-size: 1.2em;
+}
+
+label {
+	margin-top: 10px;
+	font-size: 1em;
+}
+
+input, textarea {
+	border: 1px solid var(--blue);
+	width: 100%;
+}
+
+input[type=submit] {
+	border: none;
+	margin-top: 10px;
+	
+	height: 40px;
+	width: 200px;
+	
+	background-color: var(--red);
+	color: var(--white);
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+	background-color: var(--pink);
+}
+
+/* unvisited link */
+a:link {
+	color: var(--red);
+}
+
+/* visited link */
+a:visited {
+	color: var(--purple);
+}
+
+/* mouse over link */
+a:hover {
+	background-color: var(--pink);
+}
+
+/* selected link */
+a:active {
+	color: var(--dark-blue);
+}
+
+p.center {
+	text-align: center;
+}
+
+h1.heading {
+	font-family: Futurist;
+	font-size: 45pt;
+	color: var(--white);
+}
+
+div.page {
+	width: 100%;
+	min-height: 100%;
+}
+
+div.header {
+	background-color: var(--blue);
+	
+	text-align: center;
+	
+	padding: 30px;
+}
+
+div.content-wrapper {
+	margin: auto;
+	
+	width: 80%;
+	max-width: 1200px;
+	min-width: 800px;
+	
+	margin-bottom: 50px;
+}
+
+div.content {
+	background-color: var(--white);
+	
+	padding: 1em;
+	
+	border: 5px dashed var(--blue);
+}
+
+div.gallery {
+	display: inline-flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	
+	width: 100%;
+}
+
+div.gallery > * {
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+div.gallery > :last-child {
+	margin-right: 0;
+}
+
+img.gallery-image {
+	flex-grow: 0;
+	flex-basis: 0;
+	
+	filter: grayscale(100%);
+	opacity: 0.5;
+}
+
+img.gallery-image:hover {
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
+img.circular {
+	border-radius: 50%;
+	
+	width: 150px;
+	height: 150px;
+}
+
+a.image-link:hover {
+	background: none;
+}
+
+div.break {
+	width: 100%;
+	height: 40px;
+}
+
+
+/*
+ * Styles specific to the skills tables
+ */
+div.skills {
+	margin: auto;
+	width: 100%;
+	max-width: 1000px;
+	min-width: 400px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	align-content: space-around;
+}
+
+table.skill-domain {
+	width: 30%;
+	min-width: 250px;
+	margin: 5px;
+/* 	margin: auto; */
+/* 	margin-bottom: 10px; */
+	
+/*	display: inline-block;*/
+	
+	flex-grow: 1;
+	align-self: flex-start;
+}
+
+table.skill-domain td {
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: var(--white);
+}
+
+td.skill {
+	text-align: right;
+	width: 50%;
+}
+
+div.proficiency-points {
+	overflow: none;
+	white-space: nowrap;
+}
+
+div.proficiency-point {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	
+	border-radius: 50%;
+	
+	margin: 2px;
+	
+	background-color: var(--green);
+}
+
+/*
+ * Styles specific to the timeline.
+ */
+
+.timeline-blue {
+	background-color: var(--blue);
+}
+
+li.timeline-blue:before {
+	border-top: 1em solid var(--blue);
+}
+
+.timeline-green {
+	background-color: var(--green);
+}
+
+li.timeline-green:before {
+	border-top: 1em solid var(--green);
+}
+
+div.timeline {
+	position: relative;
+	overflow: auto;
+	margin: auto;
+	width: 100%;
+	max-width: 1000px;
+	min-width: 700px;
+	margin-top: 10px;
+}
+
+div.timeline:before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 5px;
+	background: var(--blue);
+	left: 50%;
+}
+
+p.timeline-year {
+	background: var(--blue);
+	color: white;
+	font-size: 1.2em;
+	max-width: 5em;
+	margin: 0 auto 1em;
+	padding: 0.5em;
+	text-align: center;
+	position: relative;
+	clear: both;
+}
+
+ul.timeline-list {
+	list-style: none;
+	padding: 0 0 0 0;
+	z-index: 1;
+}
+
+li.timeline-entry {
+	padding: 10px;
+	margin-bottom: 1em;
+	position: relative;
+	z-index: 500;
+}
+
+li.timeline-entry:before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-left: 1em solid transparent;
+	position: absolute;
+	top: 0;
+}
+
+div.timeline-entry-content {
+	display: flex;
+	width: 100%;
+}
+
+div.timeline-entry-company {	
+	width: 80px;
+	padding: 10px;
+	
+	background: var(--white);
+}
+
+img.timeline-entry-company-image {
+	width: 80px;
+}
+
+p.timeline-entry-company-name {
+	font-size: 1em;
+}
+
+div.timeline-entry-details {
+	flex-grow: 1;
+	padding: 10px;
+}
+
+p.timeline-entry-heading {
+	font-size: 1.75em;
+	color: var(--white);
+}
+
+p.timeline-entry-role {
+	font-size: 1em;
+	color: var(--white);
+}
+
+p.timeline-dates {
+	font-size: 1em;
+	font-style: italic;
+	color: var(--dark-blue);
+}
+
+p.timeline-entry-description {
+	font-size: 1em;
+	text-align: justify;
+	margin: 10px;
+}
+
+
+@media screen and (min-width: 40em) {
+	.timeline {
+	}
+	.timeline:before {
+		left: 50%;
+	}
+	
+	ul.timeline-list {
+		padding-left: 0;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	
+	li.timeline-entry:nth-child(even) {
+		margin-top: 2em;
+	}
+	
+	li.timeline-entry {
+		width: 42%;
+	}
+	
+	li.timeline-entry-left {
+		float: left;
+	}
+	
+	li.timeline-entry-left:before {
+		border-right: 1em solid transparent;
+		right: -1em;
+		left: auto;
+	}
+	
+	li.timeline-entry-right {
+		float: right;
+	}
+	
+	li.timeline-entry-right:before {
+		border-left: 1em solid transparent;
+		left: -1em;
+		right: auto;
+	}
+	
+/*
+	li.timeline-entry:nth-child(odd):before {
+		border-right: 1em solid transparent;
+		right: -1em;
+		left: auto;
+	}*/
+	
+	li.timeline-entry:nth-of-type(2n+1) {
+		clear: both;
+	}
+}
